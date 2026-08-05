@@ -40,11 +40,6 @@ Built as a star schema with 4 dimension tables and 8 fact tables (~1,200 employe
 
 *<img width="2260" height="765" alt="Data_model" src="https://github.com/user-attachments/assets/cbc7ffb7-5ff9-4dcc-8f8d-1bd1dcc7c6d6" />*
 
-
-```
-![data model](screenshots/data_model.png)
-```
-
 ## 📈 Report Pages
 
 ### 1. Workforce Overview
