@@ -70,8 +70,10 @@ Requisition fill rate (56.5%), workforce gap vs. plan (-80, i.e. 92.1% of target
 | Metrics | DAX |
 | Visualization | Power BI (custom Chiclet Slicer, drill-through, bookmarks) |
 
+<!--
 ## 🔗 Live Report
 
 *(Recommended: publish to Power BI Service and link here, or publish to Power BI Public if the dataset stays fully synthetic — a clickable live report is significantly more convincing to reviewers than static screenshots.)*
 
 ---
+-->
