@@ -39,9 +39,10 @@ Built as a star schema with 4 dimension tables and 8 fact tables (~1,200 employe
 | `WorkforceTargets` | Dept × Month | Planned headcount & budget vs. actuals |
 
 *(Add your Model view screenshot here — this is the single most valuable image in the repo for signaling data architecture skill, not just dashboard-building.)*
+<img width="2260" height="765" alt="Data_model" src="https://github.com/user-attachments/assets/7fcbe95c-35aa-47ce-b34a-b361096a393d" />
 
 ```
-![data model](screenshots/model_view.png)
+![data model](screenshots/data_model.png)
 ```
 
 ## 📈 Report Pages
@@ -65,24 +66,6 @@ Requisition fill rate (56.5%), workforce gap vs. plan (-80, i.e. 92.1% of target
 - **Recruitment, not attrition, is the bigger workforce risk** — with only 56.5% requisition fill rate and a 48-day average time-to-fill, the organization is short 80 heads against plan even before accounting for further attrition.
 - **Data & Analytics has the longest hiring cycle (56 days)** — worth flagging as its own bottleneck rather than assuming all departments hire at the same speed.
 
-## 🧰 Example DAX Measures
-
-*(Illustrative — based on the visuals; swap in your actual measure definitions from the Power BI model.)*
-
-```dax
-Attrition Rate = 
-DIVIDE([Total Exits], [Average Headcount])
-
-Retention Rate = 
-1 - [Attrition Rate]
-
-Workforce Gap = 
-[Current Headcount] - SUM(WorkforceTargets[PlannedHeadcount])
-
-Requisition Fill Rate = 
-DIVIDE(SUM(FactRecruitment[FilledRequisitions]), SUM(FactRecruitment[OpenRequisitions]))
-```
-
 ## 🧰 Tech Stack
 
 | Layer | Tool |
@@ -92,33 +75,8 @@ DIVIDE(SUM(FactRecruitment[FilledRequisitions]), SUM(FactRecruitment[OpenRequisi
 | Metrics | DAX |
 | Visualization | Power BI (custom Chiclet Slicer, drill-through, bookmarks) |
 
-## 📂 Repo Structure
-
-```
-├── report/
-│   └── HR_Analytics.pbix
-├── data/
-│   └── HR_Workforce_Planning_Attrition_Dataset.xlsx   # public/synthetic challenge dataset
-├── screenshots/
-│   ├── overview.png
-│   ├── attrition.png
-│   ├── drivers.png
-│   ├── planner.png
-│   └── model_view.png
-├── HR_Analytics.pdf        # static export for viewers without Power BI Desktop
-└── README.md
-```
-
-## 🚀 How to Reproduce
-
-1. Download `report/HR_Analytics.pbix`
-2. Open in Power BI Desktop (free) — no external data connections required, data is embedded
-3. Explore via the 4 report tabs (Overview / Attrition / Drivers / Planner) — right-click chart elements for drill-through
-
 ## 🔗 Live Report
 
 *(Recommended: publish to Power BI Service and link here, or publish to Power BI Public if the dataset stays fully synthetic — a clickable live report is significantly more convincing to reviewers than static screenshots.)*
 
 ---
-
-*Dataset: HR Workforce Planning & Attrition Challenge dataset (public/synthetic) — no real employee or employer data used.*
