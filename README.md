@@ -38,8 +38,8 @@ Built as a star schema with 4 dimension tables and 8 fact tables (~1,200 employe
 | `FactRecruitment` | Dept × Month | Requisition funnel (open/filled/cancelled) |
 | `WorkforceTargets` | Dept × Month | Planned headcount & budget vs. actuals |
 
-*(Add your Model view screenshot here — this is the single most valuable image in the repo for signaling data architecture skill, not just dashboard-building.)*
-<img width="2260" height="765" alt="Data_model" src="https://github.com/user-attachments/assets/7fcbe95c-35aa-47ce-b34a-b361096a393d" />
+*<img width="2260" height="765" alt="Data_model" src="https://github.com/user-attachments/assets/cbc7ffb7-5ff9-4dcc-8f8d-1bd1dcc7c6d6" />*
+
 
 ```
 ![data model](screenshots/data_model.png)
